@@ -23,19 +23,13 @@
 				" NOP\n\t" \
 			); \
 		NRF_GPIO->OUTCLR = (1UL << PIN); \
-		__ASM ( \
-				" NOP\n\t" \
-				" NOP\n\t" \
-				);
-				
+
 #define NEOPIXEL_SEND_ZERO NRF_GPIO->OUTSET = (1UL << PIN); \
 		__ASM (  \
-				" NOP\n\t"  \
 				" NOP\n\t"  \
 			);  \
 		NRF_GPIO->OUTCLR = (1UL << PIN);  \
 		__ASM ( \
-				" NOP\n\t" \
 				" NOP\n\t" \
 				" NOP\n\t" \
 				" NOP\n\t" \
